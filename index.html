@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>单人提报 · 权益下单 · 需求说明</title>
+  <style>
+    :root { --bg: #f3f5f7; --ink: #1f1f1f; --sub: #595959; --line: #e6e8eb; --teal: #13c2c2; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 14px; line-height: 1.6; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 64px; }
+    h1 { margin: 0; font-size: 26px; }
+    h2 { margin: 0 0 12px; font-size: 16px; }
+    .lead { margin: 8px 0 0; color: var(--sub); }
+    .card { background: #fff; border-radius: 12px; padding: 18px; margin-top: 16px; }
+    table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    td:first-child { white-space: nowrap; width: 96px; }
+    th { background: #fafafa; color: var(--sub); font-weight: 550; }
+    .mark { display: inline-block; border-radius: 4px; font-size: 12px; padding: 0 6px; line-height: 20px; background: #fff1f0; color: #cf1322; }
+    figure { margin: 14px 0 0; }
+    img { width: 100%; border: 1px solid var(--line); border-radius: 8px; }
+    figcaption { margin-top: 8px; color: var(--sub); font-size: 12px; }
+    .bar { display: flex; align-items: center; gap: 12px; padding: 12px 0 10px; }
+    .btn { height: 32px; padding: 0 16px; border: 0; border-radius: 4px; font: inherit; }
+    .btn.soft { background: #e7fbfb; color: #13c2c2; }
+    .btn.solid { background: var(--teal); color: #fff; }
+    .meta { color: #595959; }
+    .sheet { border: 1px solid var(--line); border-radius: 8px; padding: 0 16px 8px; background: #fff; }
+    .sheet table { margin-top: 0; }
+    .sheet th { font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>单人提报 · 权益下单</h1>
+    <p class="lead">商户平台「审批管理 → 提报人审批记录」在表格上方新增权益下单、查看权益，以及已选数量和总金额。</p>
+
+    <section class="card">
+      <h2>这次改什么</h2>
+      <table>
+        <thead><tr><th></th><th>现在</th><th>改为</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>表格上方</td>
+            <td>批量删除、批量上传业务凭证、导入审批记录、导出</td>
+            <td><span class="mark">新增</span> 权益下单、查看权益、已选择数量、总金额。原有按钮保留</td>
+          </tr>
+          <tr>
+            <td>已选择数量</td>
+            <td>无</td>
+            <td>按勾选条数显示，上限 200。未勾选时为 0/200</td>
+          </tr>
+          <tr>
+            <td>总金额</td>
+            <td>无</td>
+            <td>随勾选显示。未勾选时为 0 元</td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="sheet">
+        <div class="bar">
+          <button class="btn soft" type="button">权益下单</button>
+          <button class="btn solid" type="button">查看权益</button>
+          <span class="meta">已选择数量：0/200　总金额：0 元</span>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th></th><th>批次号</th><th>审批单号</th><th>商户</th><th>审批链名称</th><th>审批提报人</th><th>提报时间</th>
+            </tr>
+          </thead>
+        </table>
+      </div>
+      <p class="lead">未勾选时，权益下单为浅底，查看权益为实心。页签、筛选和表格列不动。</p>
+    </section>
+
+    <section class="card">
+      <h2>当前页面</h2>
+      <figure>
+        <img src="assets/single-submit/01-list.png" alt="提报人审批记录当前页面" />
+        <figcaption>审批管理 / 提报人审批记录。新增内容放在这张表的上方。</figcaption>
+      </figure>
+    </section>
+  </div>
+</body>
+</html>
